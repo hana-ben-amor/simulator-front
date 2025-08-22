@@ -1,1 +1,58 @@
-/* You can add global styles to this file, and also import other style files */
+/* styles.css */
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root{
+
+  --brand-900:#2C3D42;  /* dark */
+  --brand-700:#076C8B;  /* teal */
+  --brand-500:#0c82a694;  /* blue */
+  --brand-300:#a9b7ff;
+  --ink:#0f172a;
+  --ok:#10b981;
+  --warn:#f59e0b;
+  --bg:#f4f6ff;
+}
+
+
+/* helpers */
+.text-brand-700{ color: var(--brand-700) !important; }
+.text-brand-500{ color: var(--brand-500) !important; }
+.icon-brand-700{ color: var(--brand-700) !important; }
+.icon-brand-500{ color: var(--brand-500) !important; }
+
+html,body{height:100%}
+body{
+  font-family:"Roboto",system-ui,Segoe UI,Arial,sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* Orbes floutées en arrière-plan */
+.page-orbs::before,
+.page-orbs::after{
+  content:"";
+  position:fixed;
+  inset:auto;
+  width:42vmax;height:42vmax;
+  border-radius:50%;
+  filter: blur(60px);
+  opacity:.45;
+  z-index:-1;
+}
+.page-orbs::before{
+  top:-10vmax; left:-8vmax;
+  background: radial-gradient(closest-side at 30% 30%, #8b5cf6, transparent 70%),
+              radial-gradient(closest-side at 70% 70%, #2563eb, transparent 70%);
+}
+.page-orbs::after{
+  bottom:-12vmax; right:-10vmax;
+  background: radial-gradient(closest-side at 70% 40%, #22c55e, transparent 65%),
+              radial-gradient(closest-side at 30% 70%, #60a5fa, transparent 70%);
+}
+/* HERO / CAROUSEL — hauteur plus grande */
+.hero-carousel .carousel-item img{
+  height: 520px;          /* ↑ et tu peux mettre 580/600px si tu veux encore plus */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}

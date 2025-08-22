@@ -1,0 +1,444 @@
+/* NAVBAR glass gradient */
+
+.nav-white{
+  background:#fff;
+  border-bottom:1px solid #eef2f7;
+  box-shadow:0 8px 24px rgba(15,23,42,.04);
+  color:#6b7280;
+  height:var(--nav-h);    /* hauteur figée */
+  padding-top:0;          /* ne pas mettre de padding vertical ici */
+  padding-bottom:0;
+    /* couleurs par défaut des liens bootstrap */
+  --bs-navbar-color:#6b7280;          /* gris */
+  --bs-navbar-hover-color:#111827;    /* gris foncé au hover */
+  --bs-navbar-brand-color:#111827;
+  --bs-navbar-brand-hover-color:#111827;
+}
+.nav-white .container-xxl{
+  height: auto;                 /* idem */
+  padding: 20px 24px;           /* 20px haut/bas, 24px gauche/droite */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* marque */
+.nav-white .brand-dot{
+  width:12px;height:12px;border-radius:999px;
+  background: linear-gradient(135deg, #e5e7eb, #cbd5e1);
+  box-shadow: 0 0 0 3px rgba(0,0,0,.05) inset;
+}
+
+/* barre de recherche centrée */
+.nav-search{ min-width:420px; max-width:560px; }
+.nav-search-input{
+  border-radius:999px;
+  padding-left:16px;
+  border:1px solid #e5e7eb;
+  background:#f9fafb;
+  box-shadow:none;
+}
+.nav-search-input::placeholder{ color:#9ca3af; }
+.nav-search .btn{
+  border-radius:999px;
+  background:#f3f4f6;
+  border:1px solid #e5e7eb;
+  color:#374151;
+}
+.nav-search .btn:hover{
+  background:#e5e7eb;
+}
+
+/* boutons à droite (export / chat) : look gris */
+
+.nav-white{
+  background:#fff;
+  color:#6b7280;                       /* gris */
+  border-bottom:1px solid #eef2f7;
+  padding-top:0;                       /* on neutralise le padding vertical */
+  padding-bottom:0;
+  height:var(--nav-h);                 /* hauteur figée */
+}
+
+.nav-white .container-xxl,
+.nav-white .navbar-collapse{
+  align-items:center;                  /* centre verticalement le contenu */
+}
+
+.navbar-brand{
+  height:var(--nav-h);                 /* zone cliquable = hauteur de la barre */
+  padding:0;
+  position:relative;                   /* conteneur pour le logo en absolute */
+  display:block;
+}
+.nav-white .btn-outline-light{
+  --bs-btn-color:#374151;
+  --bs-btn-border-color:#d1d5db;
+  --bs-btn-hover-bg:#f3f4f6;
+  --bs-btn-hover-border-color:#cbd5e1;
+  --bs-btn-active-bg:#e5e7eb;
+  --bs-btn-active-border-color:#cbd5e1;
+  background:#fff;
+  border-radius:12px;
+}
+.nav-white .btn.btn-light{
+  background:#ffffff;
+  border:1px solid #d1d5db;
+  color:#374151;
+}
+.nav-white .btn.btn-light:hover{ background:#f9fafb; }
+
+
+
+/* Marque */
+.brand-dot{
+  width: 12px; height: 12px; border-radius: 999px;
+  background: linear-gradient(135deg, #fff, #dbe5ff);
+  box-shadow: 0 0 0 3px rgba(255,255,255,.25) inset;
+}
+
+/* Couleurs & accents */
+.text-brand{ color: var(--brand-700); }
+.brand-dot{
+  width: 12px; height: 12px; border-radius: 999px;
+  background: linear-gradient(135deg, var(--brand-900), var(--brand-500));
+}
+
+/* Sidebar : centrée verticalement avec gros paddings */
+.sidebar{
+  min-height: calc(100vh - 2rem);
+}
+.btn-nav{
+  text-align: left;
+  padding: 0.9rem 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #e9edf7;
+  background: #fff;
+  font-weight: 500;
+}
+.btn-nav.active,
+.btn-nav:hover{
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(135deg, var(--brand-900), var(--brand-700));
+  box-shadow: 0 6px 22px rgba(46, 102, 244, .25);
+}
+
+/* KPI Cards */
+.kpi{ position: relative; }
+.kpi-primary{
+  background: linear-gradient(135deg, var(--brand-900), var(--brand-700));
+}
+.kpi-label{
+  font-size: .95rem;
+  letter-spacing: .2px;
+}
+.kpi-value{
+  font-size: 2.4rem;       /* plus grand */
+  line-height: 1.1;
+  font-weight: 900;
+  margin-top: .25rem;
+}
+.kpi-sub{
+  font-size: .85rem;
+  margin-top: .25rem;
+}
+
+/* Header */
+header h2{ letter-spacing: .2px; }
+
+/* Table */
+.table td, .table th { vertical-align: middle; }
+
+.ai-chat { width: 420px; max-width: 100vw; }
+
+.msg { display: flex; }
+.msg.user { justify-content: flex-end; }
+.msg.assistant { justify-content: flex-start; }
+
+.bubble {
+  max-width: 85%;
+  padding: .6rem .8rem;
+  border-radius: 1rem;
+  white-space: pre-wrap;
+  line-height: 1.35;
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+}
+
+.msg.user .bubble {
+  background: #e9f2ff;
+  color: #5F9DF8;
+}
+
+.msg.assistant .bubble {
+  background: #f8f9fa;
+  border: 1px solid #eceff3;
+}
+
+/* Bouton Chat avec dégradé flashy */
+.btn-chat {
+  background: linear-gradient(135deg, #026989, #3b82f6, #93c7d7);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-chat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+}
+
+/* Bouton Export PDF bleu */
+.btn-export {
+  background: #032551;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-export:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(95, 157, 248, 0.4);
+}
+.typewriter-wrap {
+  display: flex; align-items: center;
+  min-height: 2.6rem; /* évite les sauts lors de la frappe */
+}
+
+.typewriter {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cursor {
+  margin-left: 6px;
+  opacity: 1;
+  animation: blink 0.9s steps(1, end) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  50.01%, 100% { opacity: 0; }
+}
+.dashboard-header {
+  position: relative;
+  background: url('../../../public/stars.png') center/cover no-repeat;
+  color: #fff;  /* texte blanc pour lisibilité */
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Overlay sombre pour améliorer contraste */
+.dashboard-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* noir semi-transparent */
+  z-index: 0;
+  border-radius: inherit;
+}
+
+/* s'assurer que le contenu reste au-dessus */
+.dashboard-header h2,
+.dashboard-header .display-6 {
+  position: relative;
+  z-index: 1;
+  color: #fff; /* forcer en blanc */
+}
+:root{
+  --nav-h: 72px;         /* hauteur fixe de la navbar */
+  --nav-px: 24px;        /* padding horizontal interne */
+  --nav-py: 6px;    
+    --hero-h-desktop: 500px;
+  --hero-h-tablet: 420px;
+  --hero-h-mobile: 260px;     
+}
+
+.brand-logo{
+  height:130px;                        /* ton besoin */
+  width:auto;
+  position:absolute;                   /* ne pousse pas la navbar */
+  top:50%; left:0;
+  transform:translateY(-50%);          /* centré verticalement */
+  pointer-events:none;                 /* clique reste sur le lien */
+}
+
+/* Optionnel : limite la débordement sur très petits écrans */
+@media (max-width: 576px){
+  :root { --nav-h: 64px; }
+  .brand-logo{ height:84px; }
+}
+/* ---- HERO / CAROUSEL ---- */
+.hero-carousel .carousel-item img{
+  height: 320px;           /* hauteur bannière */
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+.hero-carousel .carousel-inner{
+  border-radius: 1rem;
+}
+
+.hero-carousel .carousel-caption{
+  background: linear-gradient( to top, rgba(0,0,0,.45), rgba(0,0,0,0) );
+  padding: 1.25rem 1.25rem 1rem;
+  border-radius: 0 0 1rem 1rem;
+}
+.hero-carousel .carousel-caption h5{ color:#fff; font-weight:800; }
+.hero-carousel .carousel-caption p{ color:#e5e7eb; margin:0; }
+
+/* ---- Flèche verticale droite ---- */
+.go-sim{
+  position: fixed;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1030;
+  width: 44px;
+  height: 84px;
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(180deg, #0ea5e9, #3b82f6);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(3, 37, 81, .25);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .2s;
+}
+.go-sim i{ font-size: 1.4rem; }
+.go-sim:hover{
+  transform: translateY(-50%) translateX(-2px);
+  box-shadow: 0 14px 28px rgba(3, 37, 81, .32);
+}
+@media (max-width: 576px){
+  .hero-carousel .carousel-item img{ height: 220px; }
+  .go-sim{ right: 10px; height: 72px; }
+}
+
+/* Par défaut (desktop) */
+.hero-carousel .carousel-item,
+.hero-carousel .carousel-item img{
+  height:570px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+/* Tablet */
+@media (max-width: 992px){
+  .hero-carousel .carousel-item,
+  .hero-carousel .carousel-item img{
+    height: var(--hero-h-tablet);
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px){
+  .hero-carousel .carousel-item,
+  .hero-carousel .carousel-item img{
+    height: var(--hero-h-mobile);
+  }
+}.hero-carousel .carousel-item {
+  transition: transform .7s ease, opacity .7s ease-in-out;
+}
+
+/* si tu gardes carousel-fade */
+.carousel-fade .carousel-item { opacity: 0; transition: opacity .7s ease; }
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-start,
+.carousel-fade .carousel-item-prev.carousel-item-end { opacity: 1; }
+
+/* Base stat-card style */
+.stat-card {
+  border: none;
+  border-radius: 1rem;
+  color: #fff; /* texte blanc par défaut */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+.about-section {
+  margin-top: 4rem;   /* tu peux ajuster la valeur */
+  margin-bottom: 4rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Shades */
+.shade-1 { background: #112A4D; }
+.shade-2 { background: #1E3A66; }
+.shade-3 { background: #2C4B80; }
+.shade-4 { background: #3A5C99; }
+/* ===== Footer dark ===== */
+.app-footer{
+  background: #112A4D;              /* bleu foncé demandé */
+  color: #c7d2fe;                   /* texte clair doux */
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.app-footer .container-xxl{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.app-footer .text-muted{
+  color: #e5e7eb !important;        /* texte principal */
+  opacity: .9;
+}
+
+/* Liens / socials */
+.app-footer a{
+  color: #c7d2fe;
+  text-decoration: none;
+}
+
+.app-footer a:hover{
+  color: #ffffff;
+}
+
+/* pastilles social rondes */
+.app-footer .social{
+  width: 40px; height: 40px;
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  border-radius: 999px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+}
+
+.app-footer .social:hover{
+  background: rgba(255,255,255,.16);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0,0,0,.25);
+}
+
+/* fine ligne/gradient en haut pour séparer */
+.app-footer::before{
+  content:"";
+  display:block;
+  width:100%;
+  height:6px;
+  background: linear-gradient(90deg, rgba(255,255,255,.15), rgba(255,255,255,0));
+}
+
+/* Responsive: pile verticalement sur mobile */
+@media (max-width: 768px){
+  .app-footer .container-xxl{
+    text-align: center;
+  }
+}
