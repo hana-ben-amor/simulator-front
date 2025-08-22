@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "http://simmo-back-env.eba-hukdu3zr.eu-west-3.elasticbeanstalk.com/api/$1"
+    }
+  ]
+}
