@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  API_URL: 'http://localhost:8080/api'
+  production: true,
+  API_URL: '/api'   // on passe par la réécriture Vercel
 };
