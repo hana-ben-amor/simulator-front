@@ -10,15 +10,12 @@ export interface RentDataResponse {
   fetchedAt?: string;
 }
 
-export type Rooms = 'STUDIO' | 'T1' | 'T2' | 'T3' | 'T4';
-export type Exploitation = 'LLD' | 'COURTE';
-
 export interface SimulationRequest {
   price: number;
   surface: number;
-  rooms: Rooms;
+  rooms: 'STUDIO' | 'T1' | 'T2' | 'T3' | 'T4';
   city: string;
-  exploitationType: Exploitation;
+  exploitationType: 'LLD' | 'COURTE';
 }
 
 export interface SimulationResult {
@@ -28,9 +25,7 @@ export interface SimulationResult {
   dataSource: string;
 }
 
-// 👇 base API depuis les environments (prod: '/api' pour Vercel proxy)
-const BASE = environment.API_URL.replace(/\/+$/, ''); // retire éventuel slash final
-
+const BASE = environment.API_URL.replace(/\/+$/, ''); 
 @Injectable({ providedIn: 'root' })
 export class MarketService {
   constructor(private http: HttpClient) {}
@@ -39,7 +34,7 @@ export class MarketService {
     return this.http.get<string[]>(`${BASE}/cities`);
   }
 
-  getRentData(city: string, rooms: Rooms): Observable<RentDataResponse> {
+  getRentData(city: string, rooms: string): Observable<RentDataResponse> {
     const params = new HttpParams().set('city', city).set('rooms', rooms);
     return this.http.get<RentDataResponse>(`${BASE}/rent-data`, { params });
   }
