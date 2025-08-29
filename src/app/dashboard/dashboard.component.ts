@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
   searchTerm = '';
   cities: string[] = [];
   selectedCity = '';
-  selectedRooms = 'T1';
+  selectedRooms = '';
   surface = 50;
   price=0;
   simResult?: SimulationResult;
