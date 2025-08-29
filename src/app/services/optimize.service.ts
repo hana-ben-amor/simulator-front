@@ -17,7 +17,7 @@ export interface OptimizeResult {
   city: string;
   price: number;
   rentPerM2: number;
-  monthly: number;
+  monthlyRevenue: number;
   grossYieldPct: number;
   explanation: string;
 }

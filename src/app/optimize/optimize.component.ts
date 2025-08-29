@@ -6,7 +6,7 @@ import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-optimize',
-    standalone: true, 
+  standalone: true, 
   templateUrl: './optimize.component.html',
   imports: [FormsModule, NgIf, NgFor]
 })
