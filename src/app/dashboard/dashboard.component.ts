@@ -19,6 +19,7 @@ interface ChatMsg { role: Role; text: string; }
 export class DashboardComponent implements OnInit {
   @ViewChild('revenueCanvas', { static: false }) revenueCanvas!: ElementRef<HTMLCanvasElement>;
   @ViewChild('scrollArea') private scrollArea!: ElementRef<HTMLDivElement>;
+  exploitationType: 'LLD' | 'COURTE' = 'LLD';
 
   searchTerm = '';
   cities: string[] = [];
@@ -139,7 +140,7 @@ private startTyping(): void {
 
     this.market.simulate({
       price: 250000, surface: this.surface, rooms: this.selectedRooms as any,
-      city: this.selectedCity, exploitationType: 'LLD'
+      city: this.selectedCity, exploitationType: this.exploitationType 
     }).subscribe(res => {
       this.simResult = res;
       this.upsertChart(res.monthlyRevenue);
