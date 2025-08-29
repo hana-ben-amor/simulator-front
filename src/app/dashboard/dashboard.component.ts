@@ -26,7 +26,7 @@ export class DashboardComponent implements OnInit {
   selectedCity = '';
   selectedRooms = 'T1';
   surface = 50;
-
+  price=0;
   simResult?: SimulationResult;
   rentData?: RentDataResponse;
 
@@ -139,7 +139,7 @@ private startTyping(): void {
     if (!this.selectedCity) return;
 
     this.market.simulate({
-      price: 250000, surface: this.surface, rooms: this.selectedRooms as any,
+      price: this.price, surface: this.surface, rooms: this.selectedRooms as any,
       city: this.selectedCity, exploitationType: this.exploitationType 
     }).subscribe(res => {
       this.simResult = res;

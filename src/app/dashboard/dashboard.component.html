@@ -148,12 +148,12 @@
   <!-- Filtres -->
   <div class="bg-white rounded-4 shadow-sm p-3 mb-3">
     <div class="row g-3">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <select [(ngModel)]="selectedCity" class="form-select form-select-lg" (change)="loadData()">
           <option *ngFor="let city of cities" [value]="city">{{city}}</option>
         </select>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <select [(ngModel)]="selectedRooms" class="form-select form-select-lg" (change)="loadData()">
           <option value="T1">T1</option>
           <option value="T2">T2</option>
@@ -162,10 +162,24 @@
           <option value="STUDIO">Studio</option>
         </select>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
+        <input type="number"
+              [(ngModel)]="price"
+              class="form-control form-control-lg"
+              (change)="loadData()"
+              placeholder="Prix (€)" />
+      </div>
+
+      <div class="col-md-3">
         <input type="number" [(ngModel)]="surface" class="form-control form-control-lg"
             (change)="loadData()" placeholder="Surface (m²)" />
       </div>
+          <div class="col-md-3">
+      <select [(ngModel)]="exploitationType" class="form-select form-select-lg" (change)="loadData()">
+        <option value="LLD">Longue durée</option>
+        <option value="COURTE">Courte durée (Airbnb)</option>
+      </select>
+    </div>
     </div>
   </div>
 
