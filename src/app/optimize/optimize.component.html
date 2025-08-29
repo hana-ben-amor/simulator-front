@@ -1,0 +1,57 @@
+<!-- components/optimize/optimize.component.html -->
+<div class="card shadow-sm p-4">
+  <h3 class="mb-3">🔍 Optimize Investment</h3>
+
+  <!-- Formulaire -->
+  <div class="mb-3">
+    <label class="form-label">Cities</label>
+    <div class="input-group mb-2">
+      <input [(ngModel)]="cityInput" placeholder="Enter city" class="form-control" />
+      <button class="btn btn-secondary" (click)="addCity()">Add</button>
+    </div>
+    <div *ngIf="req.cities.length">
+      <span *ngFor="let c of req.cities" class="badge bg-primary me-2">{{c}}</span>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Room Type</label>
+    <select [(ngModel)]="req.rooms" class="form-select">
+      <option value="STUDIO">Studio</option>
+      <option value="T1">T1</option>
+      <option value="T2">T2</option>
+      <option value="T3">T3</option>
+      <option value="T4">T4</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Surface (m²)</label>
+    <input type="number" [(ngModel)]="req.surface" class="form-control" />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Max Price (€)</label>
+    <input type="number" [(ngModel)]="req.maxPrice" class="form-control" />
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Target Yield (%)</label>
+    <input type="number" [(ngModel)]="req.targetGrossYieldPct" class="form-control" />
+  </div>
+
+  <button class="btn btn-primary" (click)="optimize()" [disabled]="loading">
+    {{ loading ? 'Optimizing...' : 'Find Best Option' }}
+  </button>
+</div>
+
+<!-- Résultat -->
+<div *ngIf="result" class="card mt-4 p-4 shadow-sm">
+  <h4>✅ Best Match</h4>
+  <p><strong>City:</strong> {{ result?.city }}</p>
+  <p><strong>Price:</strong> {{ result?.price}} €</p>
+  <p><strong>Rent/m²:</strong> {{ result?.rentPerM2 }} €/m²</p>
+  <p><strong>Monthly Rent:</strong> {{ result?.monthly}} €</p>
+  <p><strong>Gross Yield:</strong> {{ result?.grossYieldPct }} %</p>
+  <p class="text-muted">{{ result?.explanation }}</p>
+</div>

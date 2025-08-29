@@ -21,7 +21,6 @@ export class AiService {
   constructor(private http: HttpClient) {}
 
   chat(payload: ChatPayload) {
-    // ⚠️ utiliser des BACKTICKS `...` et pas '...'
     return this.http.post<ChatResponse>(`${BASE}/ai/chat`, payload, {
       headers: { 'Content-Type': 'application/json' }
     });

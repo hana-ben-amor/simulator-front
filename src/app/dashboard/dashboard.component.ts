@@ -5,16 +5,16 @@ import { CommonModule } from '@angular/common';
 import { Chart } from 'chart.js/auto';
 import { MarketService, RentDataResponse, SimulationResult } from '../services/market.service';
 import { AiService } from '../services/ai.service';
+import { OptimizeComponent } from "../optimize/optimize.component";
 
 type Role = 'user' | 'assistant';
 interface ChatMsg { role: Role; text: string; }
 
 @Component({
   selector: 'app-dashboard',
-  standalone: true,
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
-  imports: [FormsModule, CommonModule]
+  imports: [FormsModule, CommonModule, OptimizeComponent]
 })
 export class DashboardComponent implements OnInit {
   @ViewChild('revenueCanvas', { static: false }) revenueCanvas!: ElementRef<HTMLCanvasElement>;
